@@ -150,11 +150,12 @@ function GameBoard() {
         'Hidden Card ' + i);
     }
     //save the game board to the local storage using JSON by stringifying the cards array. 
-    localStorage.setItem('gameBoard',JSON.stringify(this));
+    //localStorage.setItem('gameBoard',JSON.stringify(this));
 }
 
 function resetGame() {
-    localStorage.clear();
+    localStorage.removeItem('gameBoard');
+    //localStorage.clear();
     location.reload();
 }
 
@@ -182,9 +183,11 @@ var gameBoard;
 //Check local storage first. If there is no gameBoard property, then populate the gameBoard from scratch
 //otherwise, we already have a game board saved, the user hadn't finished the game so retrieve it from storage
 if (!localStorage.hasOwnProperty('gameBoard')) {
+    console.log('creating new gameboard');
     gameBoard = new GameBoard();
     shuffleCards();
 } else {
+    console.log('getting gameboard from local storage');
     gameBoard = JSON.parse(localStorage.getItem('gameBoard'));
 }
 
