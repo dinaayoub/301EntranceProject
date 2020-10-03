@@ -24,6 +24,7 @@ function populateGameBoard() {
         var image = document.createElement('img');
         //add a property to the image object called "current index" and assign it the value i
         image.currentIndex = i;
+        console.log(image.currentIndex);
         //set the image id to imageI where I is the current iteration
         image.id = 'image'+i;
         //add an event listener for on click to the image we are currently iterating on.
@@ -159,7 +160,7 @@ function resetGame() {
 
 var resetButton = document.getElementById('resetButton'); 
 resetButton.addEventListener("click",resetGame,false);
-
+resetGame();
 var numberOfImagesShowing = 0;
 var indexOfFirstImageShowing = -1;
 var indexOfSecondImageShowing = -1;
