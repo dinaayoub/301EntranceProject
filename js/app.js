@@ -160,7 +160,7 @@ function resetGame() {
 
 var resetButton = document.getElementById('resetButton'); 
 resetButton.addEventListener("click",resetGame,false);
-resetGame();
+
 var numberOfImagesShowing = 0;
 var indexOfFirstImageShowing = -1;
 var indexOfSecondImageShowing = -1;
