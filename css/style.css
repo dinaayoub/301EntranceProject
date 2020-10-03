@@ -48,20 +48,22 @@ button{
     border: rgb(245, 245, 245) 1px solid;
 }
 img{
-    height:500px;
+    height:150px;
 }
-.centeredParagraph {
+.centeredDiv {
     text-align: center; 
 }
-table{
-    align-self: center;
+.thumbnailImageDiv {
+    padding: 20px;
+    float: left;
 }
-tr {
-    padding: 25px;
+.thumbnailImageDivClearFloat{
+    float: left;
+    clear: left;
+    padding: 20px;
 }
-td {
-    padding: 25px;
-}
-.thumbnailImage {
-    height: 150px;
+.resetButton {
+    margin-left: 240px;
+    color: white;
+    background-color: rgb(71, 9, 71);
 }
